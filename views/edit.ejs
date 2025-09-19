@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit User</title>
+</head>
+<body>
+  <h1>Edit User</h1>
+
+  <form action="/edit/<%= user.id %>?_method=PATCH" method="POST">
+    <label for="username">New Username:</label>
+    <input type="text" id="username" name="username" value="<%= user.username %>" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+    <button type="submit">Update</button>
+  </form>
+
+  <p><a href="/users">⬅ Back to Users</a></p>
+</body>
+</html>

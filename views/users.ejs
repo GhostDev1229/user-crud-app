@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users List</title>
+</head>
+<body>
+ <h1>All Users</h1>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  <% users.forEach(user => { %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td><a href="/edit/<%= user.id %>">Edit</a></td>
+    </tr>
+  <% }) %>
+</table>
+
+</body>
+</html>
